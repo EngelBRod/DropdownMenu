@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/css/normalize.css" rel="stylesheet"/>
         <link href="/css/font-awesome.min.css" rel="stylesheet"/>
         <link href="/css/index.css" rel="stylesheet"/>
@@ -11,13 +11,18 @@
     <body>
         <header>
             <nav>
-                <ul>
-                    <li>
-                        <a href="#">TEAMS</a>
+                <i id="movilMenu" class="fa fa-times"></i>
+                <ul id="navigation">
+                    <li id="dropdown-selector">
+                        <div id="dropMovil-container">
+                            <a class="main-link" href="#">TEAMS</a>
+                             <i id="dropMovil" class="fa fa-chevron-up"></i>
+                        </div>
+                        
                         <div id="dropdown">
                             <ul>
                                 <li>
-                                    <a href="#">MEN'S SPORTS</a>
+                                    <a class="dropdown-header" href="#">MEN'S SPORTS</a>
                                 </li>
                                 <li>
                                     <a href="#">BASEBALL</a>
@@ -31,7 +36,7 @@
                             </ul>
                             <ul>
                                 <li>
-                                    <a href="#">WOMEN'S SPORTS</a>
+                                    <a class="dropdown-header" href="#">WOMEN'S SPORTS</a>
                                 </li>
                                 <li>
                                     <a href="#">BASKETBALL</a>
@@ -43,16 +48,16 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#">TICKETS</a>
+                        <a class="main-link" href="#">TICKETS</a>
                     </li>
                     <li>
-                        <a href="#">PATRIOT CLUB</a>
+                        <a class="main-link" href="#">PATRIOT CLUB</a>
                     </li>
                     <li>
-                        <a href="#">INSIDE ATHLETICS</a>
+                        <a class="main-link" href="#">INSIDE ATHLETICS</a>
                     </li>
                     <li>
-                        <a href="#">FAN CENTRAL</a>
+                        <a class="main-link" href="#">FAN CENTRAL</a>
                     </li>
                 </ul>
             </nav>
@@ -64,4 +69,4 @@
         <!--JavaScript-->
         <script src="/js/index.js"></script>
     </body>
-</html>>
+</html>

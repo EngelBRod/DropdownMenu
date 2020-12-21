@@ -1,0 +1,248 @@
+@font-face{
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Italic.ttf");
+    font-style:italic;
+}
+@font-face{
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+
+
+
+body{
+    font-family: Roboto;
+}
+
+header{
+    background-color: #008000;
+    border-top:0.2em solid yellow;
+    border-bottom:0.2em solid yellow; 
+    height: auto; 
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+   
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+#navigation>li{
+    height: auto;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+#navigation>li:hover {
+    
+    background-color: yellow;
+    
+    
+}
+
+#navigation>li:hover .main-link{
+    color: #008000;    
+}
+
+
+.main-link{
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding:0.5em 2em;
+    height: 2em;
+    text-align: center;
+    
+}
+
+
+#dropdown{
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    background-color: #f2f2f2;
+    left: 0;
+    display: flex;
+    justify-content:flex-start;
+    
+    height: 0em;
+    transition: height 0.8s ease-out;
+   
+    
+    
+}
+
+#dropdown>ul{
+    margin-top: 5em;
+    width: 50%;
+    height: auto;
+
+}
+
+#dropdown>ul>li{
+    border-bottom: 0.1em solid #cacaca;
+    padding: 0.3em 0;
+    width: 98%;
+}
+
+#dropdown>ul>li>a{
+    
+    color:#888;
+    font-weight: bold;
+}
+
+.dropdown-header{
+    color: #008000 !important;
+    font-size: 1.2em;
+}
+
+#dropMovil-container{
+    display: flex;
+    align-items: center;
+}
+#dropMovil{
+    margin-right: 1em;
+    display: none;
+}
+
+#movilMenu{
+    height: 100%;
+    width: 1.5em;
+    border-left:0.01em solid #006d00;
+    border-width: thin;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+
+
+
+ @media screen and (min-width:1024px){
+    #dropdown-selector:hover #dropdown{
+        height: 15em;
+        max-height: 100%;
+        transition: height 0.8s ease-in;    
+        
+    }
+} 
+
+@media screen and (max-width:1024px){
+    header{
+        height: 3em;
+        
+    }
+    header>nav{        
+        display: flex;
+        justify-content:flex-end;
+        height: 100%;
+        background-color: #008000;
+    }
+  
+    #navigation{
+        flex-direction: column;       
+        justify-content: start; 
+        height: 100%;
+        width: 15em;        
+        position: absolute;
+        overflow: hidden;
+        margin-top: 3.2em;
+        background-color: #008000;
+    }
+    #navigation>li{    
+       height: auto;
+       border-bottom:0.05em solid #004900;     
+        
+    }
+    #dropdown-selector {
+       padding: 0 !important;
+    }
+    
+
+   
+    #dropdown{
+        position: static;        
+        
+        width: 100%;
+       
+        background-color: #004900;
+        padding: 0;
+       
+        flex-direction: column;
+        justify-content:flex-start;
+        
+        height: 0;
+        transition: height 0.8s ease-out;
+       
+        
+        
+    }
+
+    #dropdown>ul{
+        margin-top:0;
+        width:100%;        
+        padding: 0;    
+    }
+
+    #dropdown>ul>li{
+        padding-left: 1em;
+        border-bottom: none;
+        
+    }
+    
+    #dropdown>ul>li{
+        border-bottom:0.05em solid #008000;
+    } 
+
+    
+    
+    #dropdown>ul>li>a{
+        color: #ffffff;
+        font-style: normal;
+        font-weight:100;
+       
+    }
+    .dropdown-header{
+        color: yellow !important;
+        font-size: 1.2em;
+        font-style: italic !important;
+        font-weight: bold;
+        
+    }
+    #dropMovil{
+        display: block;
+        margin: 0;
+        margin-left: 12em;
+        font-size: 0.5em;
+        color:#ffffff;
+    }
+
+    
+    
+}
