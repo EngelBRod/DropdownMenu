@@ -33,35 +33,35 @@ function dropMenu(){
 }
 //handling sub menu
 function dropMovil(){
-    if(dropDownMovil.classList.contains('fa-chevron-up')){
+    if(dropDownMovil.classList.contains('fa-chevron-down')){
         
         innerDropDown.style.cssText=`height:212px;
                             transition: height 0.25s ease-in`
         fixingSize.style.cssText=`height:256px;
                                 transition: height 0.25s ease-in`;                    
 
-        dropDownMovil.classList.remove('fa-chevron-up');
-        dropDownMovil.classList.add('fa-chevron-down')
+        dropDownMovil.classList.remove('fa-chevron-down');
+        dropDownMovil.classList.add('fa-chevron-up')
     }else{
        
         innerDropDown.style.cssText=`height:0;
                                      transition: height 0.25s ease-out`
         fixingSize.style.cssText=`height:48px;
                                      transition: height 0.25s ease-out`;
-        dropDownMovil.classList.remove('fa-chevron-down');
-        dropDownMovil.classList.add('fa-chevron-up')
+        dropDownMovil.classList.remove('fa-chevron-up');
+        dropDownMovil.classList.add('fa-chevron-down')
     }
 }
 
 //handling resize movil to  desktop view
 function resizing(){
-    if(window.innerWidth>1024){
+    if(window.innerWidth>1023){
         
         fixingSize.style.cssText=`height:48px;`
         innerDropDown.style.cssText=`height:0;`
-        if(dropDownMovil.classList.contains('fa-chevron-down')){
-            dropDownMovil.classList.remove('fa-chevron-down');
-            dropDownMovil.classList.add('fa-chevron-up')
+        if(dropDownMovil.classList.contains('fa-chevron-up')){
+            dropDownMovil.classList.remove('fa-chevron-up');
+            dropDownMovil.classList.add('fa-chevron-down')
         }else{
             fixingSize.style.cssText=`height:48px;`
         }
